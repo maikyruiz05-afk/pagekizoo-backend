@@ -8,8 +8,8 @@
     "start": "next start"
   },
   "dependencies": {
-    "next": "latest",
-    "react": "latest",
-    "react-dom": "latest"
+    "next": "15.0.3",
+    "react": "19.0.0-rc-66854b9a-20241106",
+    "react-dom": "19.0.0-rc-66854b9a-20241106"
   }
 }
