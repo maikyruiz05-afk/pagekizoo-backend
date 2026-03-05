@@ -1,22 +1,21 @@
+const express = require("express")
 const cors = require("cors")
 require("dotenv").config()
 
 const app = express()
 
-// CORS coconst express = require("express")
-nfiguration options
 const corsOptions = {
-  origin: process.env.CORS_ORIGIN || '*', // allow all by default, or specify allowed origin in .env
-  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-  allowedHeaders: ['Content-Type', 'Authorization'],
-  credentials: true, // allow cookies if needed
+  origin: "*",
+  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+  allowedHeaders: ["Content-Type", "Authorization"],
+  credentials: true,
 }
 
 app.use(cors(corsOptions))
 app.use(express.json())
 
 app.get("/", (req, res) => {
-  res.send("Backend funcionando 🚀")
+  res.json({ mensaje: "Backend funcionando 🚀" })
 })
 
 app.get("/api/test", (req, res) => {
